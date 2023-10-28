@@ -1,7 +1,6 @@
 function [M, M_error, p, p_error] = subsonic_theo(P, P_error, y)
     %{
-    Parameters
-    ----------
+    Inputs
     P : matrix (2, 7)
         Static and total pressures corresponding to each position.
         (1,:): Static port pressures
@@ -11,17 +10,15 @@ function [M, M_error, p, p_error] = subsonic_theo(P, P_error, y)
         (1,:): Static port pressures
         (2,:): Total pressures
     y : float
-        Ratio of specific heats. (gamma)
+        Ratio of specific heats (gamma).
 
     Returns
-    -------
     M : matrix (1, 7)
         The Mach numbers for the input pressure data.
     M_error : matrix (1, 7)
         The Mach number uncertainties.
     p : matrix (1, 7)
-        The pressure for the theoretical data derived from the pressure at
-        port 1
+        The pressure for the theoretical data.
     p_err : matrix(1, 7)
         Uncertainties associated with the pressures.
     %}
