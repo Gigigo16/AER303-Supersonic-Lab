@@ -1,27 +1,24 @@
 function [M, M_error, p, p_error] = supersonic_theo(P, P_error, y)
      %{
-    Parameters
-    ----------
-    pressure : vector(2,1)
+     Input
+     pressure : vector(2,1)
         Static and total pressures corresponding to port 1.
         (1,:): Static port pressures
-        (2,:): Total pressures
-    pressure_err : vector (2, 7)
+          (2,:): Total pressures
+     pressure_err : vector (2, 7)
         Precision uncertainty of static and total pressures.
         (1,:) : Static port pressures errors
         (2,:) : Total pressures errors
-    y : float
-        Ratio of specific heats (gamma)
+     y : float
+        Ratio of specific heats (gamma).
     
     Returns
-    -------
     M : matrix (1, 7)
         The Mach numbers for the input pressure data.
     M_error : matrix (1, 7)
         The Mach number error
     p : matrix (1, 7)
-        The pressure for the theoretical data derived from the pressure at
-        port 1
+        The pressure for the theoretical data.
     p_error : matrix (1, 7)
         error associated with all pressure values at each port
     %}
