@@ -27,8 +27,8 @@ function [M, M_error, p, p_error] = subsonic_theo(P, P_error, y)
     
     p_error = zeros(1, 7);
     p = zeros(1, 7);
-    M = zeros(8);
-    M_error = zeros(8);
+    M = zeros(1,7);
+    M_error = zeros(1,7);
 
     for i = 1:size(Ar)
         f = @(m) 1/m *(((2/(y+1)*(1 + ((y-1)/2)*m^2))^((y+1)/2*(y-1)))) - Ar(i);
